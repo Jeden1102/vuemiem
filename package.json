@@ -17,7 +17,8 @@
     "nuxt": "^3.13.2",
     "tailwind-merge": "^2.5.4",
     "vue": "latest",
-    "vue-router": "latest"
+    "vue-router": "latest",
+    "vue3-lottie": "^3.3.1"
   },
   "devDependencies": {
     "prettier": "^3.3.3",

@@ -2,6 +2,9 @@
 export default {
   content: [],
   theme: {
+    container: {
+      padding: ".7rem",
+    },
     extend: {
       colors: {
         primary: "#00DC82",

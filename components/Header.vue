@@ -4,7 +4,7 @@
       <UiLogo />
       <button @click="toggleMenu" class="z-10 md:hidden">
         <Icon
-          v-if="isMenuToggled"
+          v-if="!isMenuToggled"
           name="fluent:navigation-20-filled"
           size="24"
         />
@@ -14,7 +14,7 @@
         :class="
           cn(
             `absolute left-0 top-0 flex h-full w-full flex-col items-center justify-center gap-4 bg-zinc-800 transition-all md:static md:w-fit md:flex-row md:bg-transparent lg:gap-12`,
-            { 'left-full md:left-0': isMenuToggled },
+            { 'left-full md:left-0': !isMenuToggled },
           )
         "
       >

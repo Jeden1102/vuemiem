@@ -2,7 +2,7 @@
   <button
     :class="
       cn(
-        `w-fit rounded-md px-4 py-3 font-normal transition-all hover:-translate-y-0.5`,
+        `flex w-fit items-center justify-center gap-2 rounded-md px-4 py-3 font-normal transition-all hover:-translate-y-0.5`,
         {
           'bg-primary text-black': variant === 'primary',
           'border border-gray-600 bg-black text-gray-200': variant === 'dark',
