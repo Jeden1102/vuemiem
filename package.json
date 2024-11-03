@@ -17,5 +17,9 @@
     "tailwind-merge": "^2.5.4",
     "vue": "latest",
     "vue-router": "latest"
+  },
+  "devDependencies": {
+    "prettier": "^3.3.3",
+    "prettier-plugin-tailwindcss": "^0.6.8"
   }
 }

@@ -1,15 +1,15 @@
 <template>
-  <button
+  <div
     :class="
-      cn(`w-fit rounded-md px-4 py-3 font-normal`, {
+      cn(`w-fit rounded-sm p-2 font-normal`, {
         'bg-primary text-black': variant === 'primary',
-        'border border-gray-600 bg-black text-gray-200': variant === 'dark',
+        'bg-gray-600 text-gray-200': variant === 'dark',
       })
     "
     v-bind="attrs"
   >
     <slot></slot>
-  </button>
+  </div>
 </template>
 
 <script setup lang="ts">
