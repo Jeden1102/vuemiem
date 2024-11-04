@@ -2,7 +2,6 @@
   <main>
     <Header />
     <slot></slot>
-    xx
   </main>
 </template>
 

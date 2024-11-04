@@ -1,5 +1,5 @@
 <template>
-  <section>
+  <section class="flex min-h-[calc(100vh-90px)] flex-col">
     <div
       class="container mx-auto flex flex-col gap-4 py-4 md:min-h-[60vh] md:flex-row md:py-0 lg:gap-16"
     >
@@ -47,7 +47,7 @@
         </div>
       </div>
     </div>
-    <div class="mt-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+    <div class="mt-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
       <UiFeatureCard
         title="Latest News Updates"
         subtitle="Stay Current"
