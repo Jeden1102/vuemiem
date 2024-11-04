@@ -1,8 +1,8 @@
 <template>
   <section
-    class="container mx-auto flex flex-col gap-4 py-4 md:flex-row md:py-0 lg:gap-16"
+    class="container mx-auto flex flex-col gap-4 py-4 md:min-h-[60vh] md:flex-row md:py-0 lg:gap-16"
   >
-    <div class="flex flex-col gap-4 md:py-20 lg:max-w-[720px]">
+    <div class="my-auto flex flex-col gap-4 lg:max-w-[720px]">
       <p class="font-kumbh text-lg">Your Journey to Tomorrow Begins Here</p>
       <h1 class="font-kumbh text-3xl font-normal md:text-5xl lg:text-6xl">
         Explore the Frontiers of Artificial Intelligence
@@ -11,7 +11,7 @@
         Welcome to the epicenter of AI innovation. FutureTech AI News is your
         passport to a world where machines think, learn, and reshape the future.
       </p>
-      <div class="grid grid-cols-3 border-t border-slate-800">
+      <div class="grid grid-cols-3 border-t border-slate-800 md:mt-20">
         <Number number="300" description="Resources available" />
         <Number
           class="border-x border-slate-800"
