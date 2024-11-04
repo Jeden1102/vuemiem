@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col gap-2 p-3" v-bind="attrs">
+  <div class="flex flex-col gap-2 p-3 md:p-5" v-bind="attrs">
     <p class="text-lg font-semibold md:text-2xl lg:text-3xl">
       {{ number }}<span class="text-primary">+</span>
     </p>
