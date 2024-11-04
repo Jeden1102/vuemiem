@@ -4,7 +4,9 @@
       class="container mx-auto flex flex-col gap-4 py-4 md:min-h-[60vh] md:flex-row md:py-0 lg:gap-16"
     >
       <div class="my-auto flex flex-col gap-4 lg:max-w-[720px]">
-        <p class="font-kumbh text-lg">Your Journey to Tomorrow Begins Here</p>
+        <p class="font-kumbh text-lg" data-aos="fade-up">
+          Your Journey to Tomorrow Begins Here
+        </p>
         <h1 class="font-kumbh text-3xl font-normal md:text-5xl lg:text-6xl">
           Explore the Frontiers of Artificial Intelligence
         </h1>
