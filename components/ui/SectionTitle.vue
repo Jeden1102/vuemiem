@@ -4,12 +4,21 @@
       class="container mx-auto flex flex-col justify-between gap-8 sm:flex-row sm:items-center"
     >
       <div>
-        <UiBadge variant="dark">{{ badge }}</UiBadge>
-        <p class="mt-3 font-kumbh text-2xl font-normal lg:text-4xl">
+        <UiBadge variant="dark" data-aos="fade-up">{{ badge }}</UiBadge>
+        <p
+          class="mt-3 font-kumbh text-2xl font-normal lg:text-4xl"
+          data-aos="fade-up"
+          data-aos-delay="100"
+        >
           {{ title }}
         </p>
       </div>
-      <NuxtLink v-if="ctaTitle && ctaUrl" :href="ctaUrl">
+      <NuxtLink
+        v-if="ctaTitle && ctaUrl"
+        :href="ctaUrl"
+        data-aos="fade-up"
+        data-aos-delay="100"
+      >
         <UiButton variant="dark" class="mt-6 w-full md:w-fit">
           {{ ctaTitle }}
           <Icon

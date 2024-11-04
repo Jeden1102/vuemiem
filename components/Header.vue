@@ -18,13 +18,29 @@
           )
         "
       >
-        <NuxtLink class="text-2xl md:text-base md:font-light">Home</NuxtLink>
-        <NuxtLink class="text-2xl md:text-base md:font-light">Blog</NuxtLink>
-        <NuxtLink class="text-2xl md:text-base md:font-light"
+        <NuxtLink
+          @click="toggleMenu"
+          href="/"
+          class="text-2xl md:text-base md:font-light"
+          >Home</NuxtLink
+        >
+        <NuxtLink
+          @click="toggleMenu"
+          href="/blog"
+          class="text-2xl md:text-base md:font-light"
+          >Blog</NuxtLink
+        >
+        <NuxtLink
+          @click="toggleMenu"
+          href="/resources"
+          class="text-2xl md:text-base md:font-light"
           >Resources</NuxtLink
         >
         <UiButton class="mt-2 md:ml-20 md:mt-0">
-          <NuxtLink class="text-2xl md:text-base md:font-light"
+          <NuxtLink
+            @click="toggleMenu"
+            href="/contact"
+            class="text-2xl md:text-base md:font-light"
             >Contact</NuxtLink
           >
         </UiButton>

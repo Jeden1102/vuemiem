@@ -1,7 +1,7 @@
 <template>
   <div
     :class="
-      cn(`w-fit rounded-sm p-2 font-normal`, {
+      cn(`w-fit rounded-sm px-2 py-1 text-sm font-normal`, {
         'bg-primary text-black': variant === 'primary',
         'bg-gray-600 text-gray-200': variant === 'dark',
       })

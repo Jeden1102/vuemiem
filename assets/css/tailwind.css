@@ -7,3 +7,7 @@
     @apply min-h-screen overflow-x-hidden bg-gradient-to-tr from-zinc-900 to-zinc-950 bg-no-repeat font-inter font-light leading-4 text-gray-300;
   }
 }
+
+.nuxt-loading-indicator {
+  opacity: 100% !important;
+}
