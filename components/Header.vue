@@ -1,6 +1,10 @@
 <template>
-  <header class="border-y border-zinc-700 bg-zinc-900 px-4 py-5">
-    <div class="container mx-auto flex items-center justify-between">
+  <header
+    class="overflow-hidden border-y border-zinc-700 bg-zinc-900 px-4 py-5"
+  >
+    <div
+      class="container mx-auto flex items-center justify-between overflow-x-hidden"
+    >
       <UiLogo />
       <button @click="toggleMenu" class="z-20 md:hidden">
         <Icon
@@ -14,7 +18,7 @@
         :class="
           cn(
             `absolute left-0 top-0 z-10 flex h-full w-full flex-col items-center justify-center gap-4 bg-zinc-800 transition-all md:static md:w-fit md:flex-row md:bg-transparent lg:gap-12`,
-            { 'left-full md:left-0': !isMenuToggled },
+            { '-top-full md:left-0': !isMenuToggled },
           )
         "
       >
