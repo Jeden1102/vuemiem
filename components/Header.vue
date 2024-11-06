@@ -6,7 +6,11 @@
       class="container mx-auto flex items-center justify-between overflow-x-hidden"
     >
       <UiLogo />
-      <button @click="toggleMenu" class="z-20 md:hidden">
+      <button
+        title="Toggle side menu"
+        @click="toggleMenu"
+        class="z-20 md:hidden"
+      >
         <Icon
           v-if="!isMenuToggled"
           name="fluent:navigation-20-filled"

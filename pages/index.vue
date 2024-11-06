@@ -13,6 +13,11 @@
   </div>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+useSeoMeta({
+  title: "Home | Vuemiem",
+  description: "Vue&Nuxt blog",
+});
+</script>
 
 <style scoped></style>

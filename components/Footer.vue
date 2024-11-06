@@ -4,7 +4,7 @@
       <div class="grid grid-cols-2 gap-6 sm:grid-cols-3 md:grid-cols-5">
         <div>
           <p class="mb-4 font-bold">Navigation</p>
-          <ul class="flex flex-col gap-3 text-zinc-500">
+          <ul class="flex flex-col gap-3 text-zinc-300">
             <li>
               <NuxtLink href="/">Home</NuxtLink>
             </li>
@@ -21,7 +21,7 @@
         </div>
         <div>
           <p class="mb-4 font-bold">Blog</p>
-          <ul class="flex flex-col gap-3 text-zinc-500">
+          <ul class="flex flex-col gap-3 text-zinc-300">
             <li>
               <NuxtLink href="/">Vue</NuxtLink>
             </li>
@@ -38,7 +38,7 @@
         </div>
         <div>
           <p class="mb-4 font-bold">Resources</p>
-          <ul class="flex flex-col gap-3 text-zinc-500">
+          <ul class="flex flex-col gap-3 text-zinc-300">
             <li>
               <NuxtLink href="/">Articles</NuxtLink>
             </li>
@@ -55,9 +55,10 @@
         </div>
       </div>
       <div
-        class="mt-6 flex flex-col items-center justify-between gap-4 border-t border-zinc-800 pt-6 text-gray-400 md:mt-20 md:flex-row"
+        class="mt-6 flex flex-col items-center justify-between gap-4 border-t border-zinc-800 pt-6 text-zinc-300 md:mt-20 md:flex-row"
       >
         <NuxtLink
+          title="Show my linkedin profile"
           class="md:order-2"
           href="https://www.linkedin.com/in/dominik-raducki/"
         >
