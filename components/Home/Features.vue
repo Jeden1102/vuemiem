@@ -4,7 +4,7 @@
     class="container mx-auto flex flex-col justify-between gap-8 lg:flex-row lg:items-center"
   >
     <div class="flex-1">
-      <Icon :name="icon" size="24" class="text-primary" data-aos="fade-up" />
+      <Icon :name="icon" size="48" class="text-primary" data-aos="fade-up" />
       <p
         class="my-4 mt-7 font-kumbh text-2xl font-normal lg:text-3xl"
         data-aos="fade-up"

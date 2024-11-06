@@ -9,6 +9,7 @@
       cta-title="View all blogs"
       cta-url="/blog"
     />
+    <BlogViewTeaserSimple />
   </div>
 </template>
 

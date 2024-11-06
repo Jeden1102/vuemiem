@@ -10,7 +10,10 @@
     <div>
       <Icon v-if="iconTop" :name="iconTop" size="24" class="text-primary" />
       <p class="text-lg lg:text-2xl">{{ title }}</p>
-      <p class="text-sm font-extralight text-gray-400 lg:text-base">
+      <p
+        v-if="subtitle"
+        class="text-sm font-extralight text-gray-400 lg:text-base"
+      >
         {{ subtitle }}
       </p>
       <p class="mt-6">{{ description }}</p>
@@ -28,7 +31,7 @@ const attrs = useAttrs();
 
 const props = defineProps<{
   title: string;
-  subtitle: string;
+  subtitle?: string;
   iconTop?: string;
   iconRight?: string;
   description: string;

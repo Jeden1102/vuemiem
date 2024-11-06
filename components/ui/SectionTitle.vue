@@ -3,6 +3,7 @@
     <div
       class="container mx-auto flex flex-col justify-between gap-8 sm:flex-row sm:items-center"
     >
+      <Icon v-if="icon" :name="icon" size="128" class="text-primary" />
       <div>
         <UiBadge variant="dark" data-aos="fade-up">{{ badge }}</UiBadge>
         <p
@@ -11,6 +12,14 @@
           data-aos-delay="100"
         >
           {{ title }}
+        </p>
+        <p
+          v-if="description"
+          class="mt-3 text-gray-400"
+          data-aos="fade-up"
+          data-aos-delay="100"
+        >
+          {{ description }}
         </p>
       </div>
       <NuxtLink
@@ -41,6 +50,8 @@ const props = defineProps<{
   title: string;
   badge: string;
   ctaUrl?: string;
+  description?: string;
   ctaTitle?: string;
+  icon?: string;
 }>();
 </script>
