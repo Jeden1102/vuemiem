@@ -14,10 +14,18 @@ export default defineNuxtConfig({
     ],
     "@nuxtjs/tailwindcss",
     "@nuxt/icon",
+    "@nuxtjs/apollo",
   ],
   app: {
     head: {
       titleTemplate: "%s | Vuemiem",
+    },
+  },
+  apollo: {
+    clients: {
+      default: {
+        httpEndpoint: "http://localhost:1337/graphql",
+      },
     },
   },
 });
