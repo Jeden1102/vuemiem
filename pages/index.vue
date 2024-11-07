@@ -15,7 +15,7 @@
 
 <script setup lang="ts">
 useSeoMeta({
-  title: "Home | Vuemiem",
+  title: "Home",
   description: "Vue&Nuxt blog",
 });
 </script>

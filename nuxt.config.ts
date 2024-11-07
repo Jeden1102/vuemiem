@@ -2,13 +2,22 @@
 export default defineNuxtConfig({
   compatibilityDate: "2024-04-03",
   devtools: { enabled: true },
-  modules: [[
-    "@nuxtjs/google-fonts",
-    {
-      families: {
-        Inter: "100..900",
-        "Kumbh Sans": "100..900",
+  modules: [
+    [
+      "@nuxtjs/google-fonts",
+      {
+        families: {
+          Inter: "100..900",
+          "Kumbh Sans": "100..900",
+        },
       },
+    ],
+    "@nuxtjs/tailwindcss",
+    "@nuxt/icon",
+  ],
+  app: {
+    head: {
+      titleTemplate: "%s | Vuemiem",
     },
-  ], "@nuxtjs/tailwindcss", "@nuxt/icon"],
+  },
 });
