@@ -6,6 +6,9 @@
         {
           'bg-primary text-black': variant === 'primary',
           'border border-gray-600 bg-black text-gray-200': variant === 'dark',
+          'border border-zinc-700 bg-zinc-900 text-gray-200':
+            variant === 'gray',
+          'px-6 py-5': size === 'large',
         },
       )
     "
@@ -21,11 +24,17 @@ import { defineProps, useAttrs, withDefaults } from "vue";
 enum Variants {
   primary = "primary",
   dark = "dark",
+  gray = "gray",
+}
+
+enum Size {
+  large = "large",
 }
 
 const props = withDefaults(
   defineProps<{
     variant?: keyof typeof Variants;
+    size?: keyof typeof Size;
   }>(),
   {
     variant: "primary",

@@ -1,31 +1,85 @@
 <template>
-  <div class="bg-zinc-900 py-20"></div>
+  <div class="bg-zinc-900 py-20">
+    <div class="container mx-auto">
+      <BlogViewCategories
+        v-if="categories"
+        :categories="allBlogCategories"
+        v-model="activeCategory"
+      />
+      <div class="flex flex-col gap-7">
+        <BlogTeaser v-if="blogs" v-for="blog in blogs" :blog="blog" />
+      </div>
+    </div>
+  </div>
 </template>
 
 <script lang="ts" setup>
 import { GET_BLOG_CATEGORIES, GET_BLOGS_BY_CATEGORIES } from "~/queries/blogs";
+import type {
+  BlogCategory,
+  BlogCategoriesResponse,
+  Blog,
+  BlogsResponse,
+} from "./types";
+import { watch, computed, ref } from "vue";
 
-// const { data } = await useAsyncQuery(GET_BLOG_CATEGORIES);
-// console.log(data, data.value);
+const { data: categories } =
+  await useAsyncQuery<BlogCategoriesResponse>(GET_BLOG_CATEGORIES);
 
-const filters = {
-  blog_categories: {
-    name: {
-      eq: "Vue",
+const activeCategory = ref("all");
+
+const allBlogCategories = computed(() => {
+  if (!categories.value) {
+    return [];
+  }
+  return [
+    {
+      name: "All",
+      slug: "all",
     },
-  },
-};
+    ...categories.value?.blogCategories,
+  ] as BlogCategory[];
+});
+
+const filters = computed(() => {
+  const _filters = {
+    blog_categories: {
+      name: {},
+    },
+  };
+
+  if (activeCategory.value !== "all") {
+    _filters.blog_categories.name = {
+      eq: activeCategory.value,
+    };
+  }
+
+  return _filters;
+});
 
 const pagination = {
   pageSize: 3,
 };
 
-const { data, error } = await useAsyncQuery(GET_BLOGS_BY_CATEGORIES, {
-  filters,
-  pagination,
+const blogs = ref<Blog[]>([]);
+
+async function fetchBlogs() {
+  const { data, error } = await useAsyncQuery<BlogsResponse>(
+    GET_BLOGS_BY_CATEGORIES,
+    {
+      filters: filters.value,
+      pagination,
+    },
+  );
+  if (data.value) {
+    blogs.value = data.value.blogs;
+  } else {
+  }
+}
+
+watch(activeCategory, () => {
+  fetchBlogs();
 });
 
-console.log(data.value);
+fetchBlogs();
 </script>
-
-<style scoped></style>

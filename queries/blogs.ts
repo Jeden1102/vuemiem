@@ -2,6 +2,7 @@ export const GET_BLOG_CATEGORIES = gql`
   query BlogCategories {
     blogCategories {
       name
+      slug
     }
   }
 `;
@@ -19,6 +20,12 @@ export const GET_BLOGS_BY_CATEGORIES = gql`
       slug
       blog_categories {
         name
+      }
+      author {
+        name
+        surname
+        linkedin
+        position
       }
     }
   }
