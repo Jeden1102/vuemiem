@@ -1,5 +1,5 @@
 <template>
-  <div class="flex gap-4">
+  <div class="flex flex-wrap gap-4">
     <UiButton
       :variant="activeCategory === category.slug ? 'primary' : 'gray'"
       size="large"
@@ -24,6 +24,4 @@ const props = defineProps<{
 const setActiveCategory = (slug: string) => {
   activeCategory.value = slug;
 };
-
-console.log(props.categories);
 </script>
