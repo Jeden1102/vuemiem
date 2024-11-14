@@ -12,20 +12,27 @@ export const GET_BLOGS_BY_CATEGORIES = gql`
     $filters: BlogFiltersInput
     $pagination: PaginationArg
   ) {
-    blogs(filters: $filters, pagination: $pagination) {
-      title
-      publishedAt
-      lead
-      content
-      slug
-      blog_categories {
-        name
+    blogs_connection(filters: $filters, pagination: $pagination) {
+      pageInfo {
+        total
       }
-      author {
-        name
-        surname
-        linkedin
-        position
+      nodes {
+        title
+        slug
+        publishedAt
+        lead
+        createdAt
+        content
+        blog_categories {
+          slug
+          name
+        }
+        author {
+          surname
+          position
+          name
+          linkedin
+        }
       }
     }
   }

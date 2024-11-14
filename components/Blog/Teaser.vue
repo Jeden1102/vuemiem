@@ -1,6 +1,6 @@
 <template>
   <div class="flex flex-col gap-4 py-8 md:flex-row md:gap-8 lg:gap-32">
-    <div class="flex w-60 gap-4" v-if="blog.author">
+    <div class="flex w-52 min-w-52 gap-4" v-if="blog.author">
       <NuxtLink
         title="Show my linkedin profile"
         target="_blank"
@@ -26,7 +26,7 @@
       <p class="font-thin" v-html="blog.lead"></p>
     </div>
     <NuxtLink :href="`/blog/${blog.slug}`" class="md:ml-auto">
-      <UiButton variant="dark" class="mt-6 w-full md:w-fit">
+      <UiButton variant="dark" class="mt-6 w-full min-w-52 md:w-fit">
         Read Blog
         <Icon
           size="24"
@@ -45,6 +45,4 @@ import type { Blog } from "./types";
 const props = defineProps<{
   blog: Blog;
 }>();
-
-console.log(props.blog.author.position, props.blog.author);
 </script>

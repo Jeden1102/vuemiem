@@ -25,5 +25,10 @@ export type Blog = {
 };
 
 export type BlogsResponse = {
-  blogs: Blog[];
+  blogs_connection: {
+    pageInfo: {
+      total: number;
+    };
+    nodes: Blog[];
+  };
 };

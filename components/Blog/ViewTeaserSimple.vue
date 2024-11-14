@@ -8,33 +8,20 @@
       />
       <div class="flex flex-col gap-6 divide-y divide-zinc-600">
         <BlogTeaser
-          v-if="blogs"
+          v-if="blogs && !isLoading"
           v-for="blog in blogs"
           :blog="blog"
           :key="blog.slug"
         />
+        <BlogLoader v-else v-for="i in 5" :key="i" />
       </div>
 
-      <div
-        v-if="isPaginated && totalPages > 1"
-        class="mt-6 flex justify-center gap-4"
-      >
-        <button
-          @click="prevPage"
-          :disabled="currentPage === 1"
-          class="rounded bg-zinc-700 px-4 py-2 text-white"
-        >
-          Previous
-        </button>
-        <span class="text-white">{{ currentPage }} / {{ totalPages }}</span>
-        <button
-          @click="nextPage"
-          :disabled="currentPage === totalPages"
-          class="rounded bg-zinc-700 px-4 py-2 text-white"
-        >
-          Next
-        </button>
-      </div>
+      <UiPagination
+        v-if="isPaginated"
+        :totalPages="totalPages"
+        :currentPage="pagination.page"
+        @pageChanged="(num: number) => handlePageChange(num)"
+      />
     </div>
   </div>
 </template>
@@ -95,10 +82,11 @@ const pagination = ref({
 });
 
 const blogs = ref<Blog[]>([]);
+const isLoading = ref(true);
 const totalPages = ref(1);
-const currentPage = ref(1);
 
 async function fetchBlogs() {
+  isLoading.value = true;
   const { data, error } = await useAsyncQuery<BlogsResponse>(
     GET_BLOGS_BY_CATEGORIES,
     {
@@ -108,30 +96,21 @@ async function fetchBlogs() {
   );
 
   if (data.value) {
-    blogs.value = data.value.blogs;
-    console.log(data.value);
-    // @todo -> dynamic total sum.
-    totalPages.value = Math.ceil(6 / pagination.value.pageSize);
+    blogs.value = data.value.blogs_connection.nodes;
+    totalPages.value = Math.ceil(
+      data.value.blogs_connection.pageInfo.total / pagination.value.pageSize,
+    );
   }
+  isLoading.value = false;
 }
 
-function nextPage() {
-  if (currentPage.value < totalPages.value) {
-    currentPage.value++;
-    pagination.value.page = currentPage.value;
-    fetchBlogs();
-  }
+function handlePageChange(num: number) {
+  pagination.value.page = num;
+  fetchBlogs();
 }
 
-function prevPage() {
-  if (currentPage.value > 1) {
-    currentPage.value--;
-    pagination.value.page = currentPage.value;
-    fetchBlogs();
-  }
-}
-
-watch([activeCategory, currentPage], () => {
+watch(activeCategory, () => {
+  pagination.value.page = 1;
   fetchBlogs();
 });
 
