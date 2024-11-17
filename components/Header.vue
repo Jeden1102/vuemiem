@@ -1,10 +1,6 @@
 <template>
-  <header
-    class="overflow-hidden border-y border-zinc-700 bg-zinc-900 px-4 py-5"
-  >
-    <div
-      class="container mx-auto flex items-center justify-between overflow-x-hidden"
-    >
+  <header class="border-y border-zinc-700 bg-zinc-900 px-4 py-5">
+    <div class="container mx-auto flex items-center justify-between">
       <UiLogo />
       <button
         title="Toggle side menu"

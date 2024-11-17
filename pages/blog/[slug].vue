@@ -8,7 +8,6 @@ import type { BlogResponse, Blog } from "~/components/Blog/types";
 const route = useRoute();
 
 const blog = ref<null | Blog>(null);
-console.log(route.params.slug);
 
 const { data } = await useAsyncQuery<BlogResponse>(GET_BLOG_BY_SLUG, {
   filters: {
@@ -23,7 +22,7 @@ if (data.value?.blogs[0]) {
 } else {
   showError({
     statusCode: 404,
-    statusMessage: "Page Not Found",
+    statusMessage: "Blog post not found",
   });
 }
 console.log(data.value);
