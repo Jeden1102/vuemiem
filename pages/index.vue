@@ -9,7 +9,7 @@
       cta-title="View all blogs"
       cta-url="/blog"
     />
-    <BlogViewTeaserSimple />
+    <BlogViewTeaserSimple :perPage="3" :isPaginated="false" />
   </div>
 </template>
 

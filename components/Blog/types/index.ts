@@ -32,3 +32,7 @@ export type BlogsResponse = {
     nodes: Blog[];
   };
 };
+
+export type BlogResponse = {
+  blogs: Blog[];
+};

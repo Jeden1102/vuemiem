@@ -17,7 +17,7 @@
       <p class="h-12 w-72 bg-zinc-600"></p>
     </div>
     <div class="md:ml-auto">
-      <UiButton variant="dark" class="h-12 w-52 bg-zinc-600"> </UiButton>
+      <UiButton variant="dark" class="h-12 min-w-52 bg-zinc-600"> </UiButton>
     </div>
   </div>
 </template>

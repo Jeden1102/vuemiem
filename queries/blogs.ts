@@ -22,7 +22,6 @@ export const GET_BLOGS_BY_CATEGORIES = gql`
         publishedAt
         lead
         createdAt
-        content
         blog_categories {
           slug
           name
@@ -33,6 +32,29 @@ export const GET_BLOGS_BY_CATEGORIES = gql`
           name
           linkedin
         }
+      }
+    }
+  }
+`;
+
+export const GET_BLOG_BY_SLUG = gql`
+  query getBlogBySlug($filters: BlogFiltersInput) {
+    blogs(filters: $filters) {
+      title
+      slug
+      publishedAt
+      lead
+      createdAt
+      content
+      blog_categories {
+        slug
+        name
+      }
+      author {
+        surname
+        position
+        name
+        linkedin
       }
     }
   }
