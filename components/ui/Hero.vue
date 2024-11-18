@@ -3,17 +3,16 @@
     class="bg-gradient-to-r from-blue-500 to-green-500 py-8 text-white md:py-20"
   >
     <div class="container mx-auto flex flex-col gap-4 md:flex-row md:items-end">
-      <div class="mr-6 flex min-w-[200px] max-w-[30%] flex-col">
+      <div class="mr-6 flex min-w-[200px] max-w-[40%] flex-col">
         <h1
           class="mb-4 font-kumbh text-4xl font-semibold md:text-5xl lg:text-6xl"
         >
           {{ title }}
         </h1>
       </div>
-
-      <p class="flex-1 text-lg leading-relaxed">
-        {{ description }}
-      </p>
+      <ClientOnly>
+        <p class="flex-1 text-lg leading-relaxed" v-html="description"></p>
+      </ClientOnly>
     </div>
   </div>
 </template>

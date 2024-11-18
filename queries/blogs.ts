@@ -46,6 +46,7 @@ export const GET_BLOG_BY_SLUG = gql`
       lead
       createdAt
       content
+      reading_time
       blog_categories {
         slug
         name

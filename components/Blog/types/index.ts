@@ -13,9 +13,8 @@ export type Blog = {
   content: string;
   lead: string;
   publishedAt: string;
-  blog_categores: {
-    name: string;
-  };
+  reading_time: string;
+  blog_categories: BlogCategory | BlogCategory[];
   author: {
     name: string;
     surname: string;
