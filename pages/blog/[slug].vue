@@ -73,6 +73,8 @@ const { data } = await useAsyncQuery<BlogResponse>(GET_BLOG_BY_SLUG, {
   },
 });
 
+console.log(data, "TUTAJ");
+
 if (data.value?.blogs[0]) {
   blog.value = data.value?.blogs[0];
 } else {
