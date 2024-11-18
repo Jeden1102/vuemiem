@@ -3,7 +3,6 @@ import "prismjs/themes/prism.css"; // Motyw Prism.js
 
 export default defineNuxtPlugin(() => {
   Prism.highlightAll();
-  console.log("HERE");
 
   document.querySelectorAll("pre").forEach((pre) => {
     const button = document.createElement("button");
