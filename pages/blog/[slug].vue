@@ -12,12 +12,9 @@
           </div>
           <div class="flex flex-col gap-2">
             <p class="font-thin">Category</p>
-            <div v-if="Array.isArray(blog.blog_categories)">
-              <p v-for="blogCategory in blog.blog_categories">
-                {{ blogCategory.name }}
-              </p>
-            </div>
-            <p v-else>{{ blog.blog_categories.name }}</p>
+            <p v-for="blogCategory in blog.blog_categories">
+              {{ blogCategory.name }}
+            </p>
           </div>
           <div class="flex flex-col gap-2">
             <p class="font-thin">Reading time</p>
@@ -45,6 +42,12 @@
 
       <div class="blog-page w-full flex-1" v-html="blog.content"></div>
     </div>
+    <BlogViewTeaserSimple
+      title="Similiar news"
+      :perPage="3"
+      :isPaginated="false"
+      :baseCategory="blog.blog_categories[0].slug"
+    />
   </div>
 </template>
 

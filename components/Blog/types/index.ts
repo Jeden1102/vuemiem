@@ -14,7 +14,7 @@ export type Blog = {
   lead: string;
   publishedAt: string;
   reading_time: string;
-  blog_categories: BlogCategory | BlogCategory[];
+  blog_categories: BlogCategory[];
   author: {
     name: string;
     surname: string;

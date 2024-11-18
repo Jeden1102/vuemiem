@@ -1,8 +1,9 @@
 <template>
   <div class="bg-zinc-900 py-20">
     <div class="container mx-auto flex flex-col gap-8">
+      <p class="text-2xl">{{ title }}</p>
       <BlogViewCategories
-        v-if="categories"
+        v-if="categories && !baseCategory"
         :categories="allBlogCategories"
         v-model="activeCategory"
       />
@@ -40,12 +41,14 @@ import { defineProps } from "vue";
 const props = defineProps<{
   perPage: number;
   isPaginated: boolean;
+  title?: string;
+  baseCategory?: string;
 }>();
 
 const { data: categories } =
   await useAsyncQuery<BlogCategoriesResponse>(GET_BLOG_CATEGORIES);
 
-const activeCategory = ref("all");
+const activeCategory = ref(props.baseCategory || "all");
 
 const allBlogCategories = computed(() => {
   if (!categories.value) {
