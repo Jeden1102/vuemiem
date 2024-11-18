@@ -19,5 +19,3 @@ useSeoMeta({
   description: "Vue&Nuxt blog",
 });
 </script>
-
-<style scoped></style>
