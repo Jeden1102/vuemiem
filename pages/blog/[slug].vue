@@ -26,16 +26,13 @@
           </div>
         </div>
         <div class="flex flex-wrap gap-x-4 gap-y-2">
-          <p class="w-full">Share this blog!</p>
+          <p class="mb-2 w-full">Share this blog!</p>
           <ClientOnly>
-            <SocialShare
-              v-for="network in networks"
-              :network="network"
-              :url="currentURI"
-              :styled="true"
-            >
-              <template #label>Udostępnij</template>
-            </SocialShare>
+            <UiButton v-for="network in networks">
+              <SocialShare :network="network" :url="currentURI">
+                <template #label>Udostępnij</template>
+              </SocialShare>
+            </UiButton>
           </ClientOnly>
         </div>
       </div>

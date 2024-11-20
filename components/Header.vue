@@ -1,5 +1,7 @@
 <template>
-  <header class="border-y border-zinc-700 bg-zinc-900 px-4 py-5">
+  <header
+    class="fixed left-0 top-0 z-10 w-full border-y border-zinc-700 bg-zinc-900 px-4 py-5"
+  >
     <div class="container mx-auto flex items-center justify-between">
       <UiLogo />
       <button
@@ -17,7 +19,7 @@
       <nav
         :class="
           cn(
-            `absolute left-0 top-0 z-10 flex h-full w-full flex-col items-center justify-center gap-4 bg-zinc-800 transition-all md:static md:w-fit md:flex-row md:bg-transparent lg:gap-12`,
+            `fixed left-0 top-0 z-10 flex h-full w-full flex-col items-center justify-center gap-4 bg-zinc-800 transition-all md:static md:w-fit md:flex-row md:bg-transparent lg:gap-12`,
             { '-top-full md:left-0': !isMenuToggled },
           )
         "

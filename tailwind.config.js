@@ -3,7 +3,7 @@ export default {
   content: [],
   theme: {
     container: {
-      padding: ".7rem",
+      padding: "1.4rem",
     },
     extend: {
       colors: {

@@ -22,7 +22,7 @@
     }
 
     p {
-      @apply leading-snug;
+      @apply leading-7;
     }
 
     ul {
@@ -31,6 +31,10 @@
 
     ol {
       @apply list-inside list-decimal space-y-2;
+    }
+
+    a {
+      @apply font-semibold text-primary hover:underline;
     }
   }
 
