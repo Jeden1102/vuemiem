@@ -2,19 +2,19 @@
   <div class="bg-zinc-900 py-20">
     <div class="container mx-auto flex flex-col gap-8">
       <p class="text-2xl" ref="blogSection">{{ title }}</p>
-      <BlogViewCategories
+      <ResourcesViewCategories
         v-if="categories && !baseCategory"
         :categories="allBlogCategories"
         v-model="activeCategory"
       />
       <div class="flex flex-col gap-6 divide-y divide-zinc-600">
-        <BlogTeaser
-          v-if="blogs && !isLoading"
-          v-for="blog in blogs"
-          :blog="blog"
-          :key="blog.slug"
+        <ResourcesTeaser
+          v-if="resources && !isLoading"
+          v-for="resource in resources"
+          :resource="resource"
+          :key="resource.title"
         />
-        <BlogLoader v-else v-for="i in 5" :key="i" />
+        <ResourcesLoader v-else v-for="i in 5" :key="i" />
       </div>
 
       <UiPagination
@@ -28,11 +28,14 @@
 </template>
 
 <script lang="ts" setup>
-import { GET_BLOG_CATEGORIES, GET_BLOGS_BY_CATEGORIES } from "~/queries/blogs";
+import {
+  GET_RESOURCES_BY_CATEGORIES,
+  GET_RESOURCES_CATEGORIES,
+} from "~/queries/resources";
 import type {
-  BlogCategory,
-  BlogCategoriesResponse,
-  Blog,
+  ResourceCategory,
+  ResourcesCategoriesResponse,
+  Resource,
   BlogsResponse,
 } from "./types";
 import { watch, computed, ref } from "vue";
@@ -45,8 +48,9 @@ const props = defineProps<{
   baseCategory?: string;
 }>();
 
-const { data: categories } =
-  await useAsyncQuery<BlogCategoriesResponse>(GET_BLOG_CATEGORIES);
+const { data: categories } = await useAsyncQuery<ResourcesCategoriesResponse>(
+  GET_RESOURCES_CATEGORIES,
+);
 
 const activeCategory = ref(props.baseCategory || "all");
 
@@ -62,19 +66,19 @@ const allBlogCategories = computed(() => {
       name: "All",
       slug: "all",
     },
-    ...categories.value?.blogCategories,
-  ] as BlogCategory[];
+    ...categories.value?.resourceCategories,
+  ] as ResourceCategory[];
 });
 
 const filters = computed(() => {
   const _filters = {
-    blog_categories: {
+    resource_categories: {
       slug: {},
     },
   };
 
   if (activeCategory.value !== "all") {
-    _filters.blog_categories.slug = {
+    _filters.resource_categories.slug = {
       eq: activeCategory.value,
     };
   }
@@ -87,14 +91,14 @@ const pagination = ref({
   page: 1,
 });
 
-const blogs = ref<Blog[]>([]);
+const resources = ref<Resource[]>([]);
 const isLoading = ref(true);
 const totalPages = ref(1);
 
-async function fetchBlogs() {
+async function fetchResources() {
   isLoading.value = true;
   const { data, error } = await useAsyncQuery<BlogsResponse>(
-    GET_BLOGS_BY_CATEGORIES,
+    GET_RESOURCES_BY_CATEGORIES,
     {
       filters: filters.value,
       pagination: pagination.value,
@@ -102,9 +106,10 @@ async function fetchBlogs() {
   );
 
   if (data.value) {
-    blogs.value = data.value.blogs_connection.nodes;
+    resources.value = data.value.resources_connection.nodes;
     totalPages.value = Math.ceil(
-      data.value.blogs_connection.pageInfo.total / pagination.value.pageSize,
+      data.value.resources_connection.pageInfo.total /
+        pagination.value.pageSize,
     );
   }
   isLoading.value = false;
@@ -120,13 +125,13 @@ async function fetchBlogs() {
 
 function handlePageChange(num: number) {
   pagination.value.page = num;
-  fetchBlogs();
+  fetchResources();
 }
 
 watch(activeCategory, () => {
   pagination.value.page = 1;
-  fetchBlogs();
+  fetchResources();
 });
 
-fetchBlogs();
+fetchResources();
 </script>

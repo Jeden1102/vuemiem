@@ -28,7 +28,7 @@
           @click="toggleMenu"
           href="/"
           class="text-2xl md:text-base md:font-light"
-          >Home</NuxtLink
+          >Strona główna</NuxtLink
         >
         <NuxtLink
           @click="toggleMenu"
@@ -38,16 +38,16 @@
         >
         <NuxtLink
           @click="toggleMenu"
-          href="/resources"
+          href="/zasoby"
           class="text-2xl md:text-base md:font-light"
-          >Resources</NuxtLink
+          >Materiały</NuxtLink
         >
         <UiButton class="mt-2 md:ml-20 md:mt-0">
           <NuxtLink
             @click="toggleMenu"
             href="/contact"
             class="text-2xl md:text-base md:font-light"
-            >Contact</NuxtLink
+            >Kontakt</NuxtLink
           >
         </UiButton>
       </nav>

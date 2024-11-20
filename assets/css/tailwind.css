@@ -6,19 +6,19 @@
 
 @layer base {
   body {
-    @apply min-h-screen overflow-x-hidden bg-gradient-to-tr from-zinc-900 to-zinc-950 bg-no-repeat font-inter font-light leading-4 text-gray-300;
+    @apply font-poppins min-h-screen overflow-x-hidden bg-gradient-to-tr from-zinc-900 to-zinc-950 bg-no-repeat font-light leading-4 text-gray-300;
   }
 
   .blog-page {
     h2 {
-      @apply my-4 text-2xl font-semibold md:text-3xl;
+      @apply font-dmSerifText my-4 text-2xl font-semibold md:text-3xl;
     }
 
     h3,
     h4,
     h5,
     h6 {
-      @apply my-4 text-xl font-semibold md:text-2xl;
+      @apply font-dmSerifText my-4 text-xl font-semibold md:text-2xl;
     }
 
     p {

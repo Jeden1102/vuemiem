@@ -10,8 +10,9 @@ export default {
         primary: "#00DC82",
       },
       fontFamily: {
-        inter: "Inter",
+        poppins: "Poppins",
         kumbh: "Kumbh Sans",
+        dmSerifText: "DM Serif Text",
       },
     },
   },

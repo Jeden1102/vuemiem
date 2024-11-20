@@ -12,7 +12,8 @@ export default defineNuxtConfig({
       "@nuxtjs/google-fonts",
       {
         families: {
-          Inter: "100..900",
+          "DM Serif Text": true,
+          Poppins: [100, 200, 300, 400, 500, 600, 700, 800, 900],
           "Kumbh Sans": "100..900",
         },
       },
@@ -33,6 +34,15 @@ export default defineNuxtConfig({
         httpEndpoint:
           process.env.BACKEND_URI || "http://localhost:1337/graphql",
       },
+    },
+  },
+  hooks: {
+    "pages:extend"(pages) {
+      pages.push({
+        name: "resources",
+        path: "/zasoby",
+        file: "~/pages/resources/index.vue",
+      });
     },
   },
 });
