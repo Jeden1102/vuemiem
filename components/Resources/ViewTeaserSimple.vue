@@ -7,14 +7,14 @@
         :categories="allBlogCategories"
         v-model="activeCategory"
       />
-      <div class="flex flex-col gap-6 divide-y divide-zinc-600">
+      <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
         <ResourcesTeaser
           v-if="resources && !isLoading"
           v-for="resource in resources"
           :resource="resource"
           :key="resource.title"
         />
-        <ResourcesLoader v-else v-for="i in 5" :key="i" />
+        <ResourcesLoader v-else v-for="i in 6" :key="i" />
       </div>
 
       <UiPagination

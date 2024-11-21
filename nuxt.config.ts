@@ -5,6 +5,7 @@ export default defineNuxtConfig({
   runtimeConfig: {
     public: {
       APP_BASE_URI: process.env.NUXT_PUBLIC_APP_BASE_URI,
+      APP_BACKEND_BASE_URI: process.env.NUXT_PUBLIC_BACKEND_BASE_URI,
     },
   },
   modules: [
@@ -22,6 +23,7 @@ export default defineNuxtConfig({
     "@nuxt/icon",
     "@nuxtjs/apollo",
     "@stefanobartoletti/nuxt-social-share",
+    "@nuxt/image",
   ],
   app: {
     head: {

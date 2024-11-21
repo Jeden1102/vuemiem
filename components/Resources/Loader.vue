@@ -1,23 +1,14 @@
 <template>
-  <div
-    class="flex animate-pulse flex-col gap-4 py-8 shadow md:flex-row md:gap-8 lg:gap-32"
-  >
-    <div class="flex w-52 min-w-52 gap-4">
-      <div
-        class="flex h-12 w-12 min-w-12 items-center justify-center rounded-full bg-zinc-800"
-      ></div>
-      <div class="flex flex-col gap-2">
-        <p class="h-4 w-3/4 bg-zinc-600 md:w-40"></p>
-        <div class="h-8 w-3/4 bg-zinc-600 md:w-40"></div>
+  <div class="flex animate-pulse flex-col gap-4 md:gap-8">
+    <div class="flex w-full min-w-52 gap-4">
+      <div class="flex w-full flex-col gap-2">
+        <div class="h-40 w-full bg-zinc-600 md:w-40"></div>
       </div>
     </div>
     <div class="flex flex-col gap-4">
-      <p class="h-4 w-3/4 bg-zinc-600 md:mb-4 md:w-40"></p>
-      <div class="h-8 w-72 bg-zinc-600"></div>
-      <p class="h-12 w-72 bg-zinc-600"></p>
-    </div>
-    <div class="md:ml-auto">
-      <UiButton variant="dark" class="h-12 min-w-52 bg-zinc-600"> </UiButton>
+      <div class="h-8 w-3/4 bg-zinc-600"></div>
+      <div class="h-20 min-w-60 bg-zinc-600"></div>
+      <div class="h-8 min-w-60 bg-zinc-600"></div>
     </div>
   </div>
 </template>

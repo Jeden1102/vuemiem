@@ -9,6 +9,7 @@
           'border border-zinc-700 bg-zinc-900 text-gray-200':
             variant === 'gray',
           'px-6 py-5': size === 'large',
+          'px-3 py-2': size === 'small',
         },
       )
     "
@@ -29,6 +30,7 @@ enum Variants {
 
 enum Size {
   large = "large",
+  small = "small",
 }
 
 const props = withDefaults(

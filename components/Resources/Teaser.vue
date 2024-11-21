@@ -1,14 +1,25 @@
 <template>
-  <div class="flex flex-col gap-4 py-8 md:flex-row md:gap-8 lg:gap-32">
+  <div class="flex flex-col gap-4 rounded-md bg-zinc-800 p-4 md:gap-8">
+    <NuxtImg :src="imgUri" height="200" width="470" class="h-40 object-cover" />
     <div class="flex flex-col gap-4">
       <p class="text-xl font-semibold">
         {{ resource.title }}
       </p>
-      <p class="font-thin" v-html="resource.lead"></p>
+      <ClientOnly>
+        <p class="font-thin" v-html="resource.lead"></p>
+      </ClientOnly>
     </div>
-    <NuxtLink :href="resource.url" class="md:ml-auto">
-      <UiButton variant="dark" class="mt-6 w-full min-w-52 md:w-fit">
-        Read Blog
+    <div>
+      <NuxtLink
+        target="_blank"
+        :href="resource.author_uri"
+        class="font-normal text-primary"
+        >{{ resource.author }}</NuxtLink
+      >
+    </div>
+    <NuxtLink :href="fileUri ? fileUri : resource.url" class="mt-auto">
+      <UiButton variant="dark" class="w-full min-w-52">
+        Sprawdź
         <Icon
           size="24"
           name="material-symbols:arrow-outward"
@@ -22,8 +33,14 @@
 <script setup lang="ts">
 import { defineProps } from "vue";
 import type { Resource } from "./types";
+const config = useRuntimeConfig();
 
 const props = defineProps<{
   resource: Resource;
 }>();
+
+const imgUri = config.public.APP_BACKEND_BASE_URI + props.resource.image.url;
+const fileUri = props.resource.file?.url
+  ? config.public.APP_BACKEND_BASE_URI + props.resource.file?.url
+  : null;
 </script>
