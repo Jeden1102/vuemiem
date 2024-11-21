@@ -51,6 +51,8 @@
 <script setup lang="ts">
 import { GET_BLOG_BY_SLUG } from "~/queries/blogs";
 import type { BlogResponse, Blog } from "~/components/Blog/types";
+import Prism from "prismjs";
+import "prismjs/themes/prism.css";
 
 const route = useRoute();
 const blog = ref<null | Blog>(null);
@@ -78,6 +80,28 @@ if (data.value?.blogs[0]) {
     statusMessage: "Blog post not found",
   });
 }
+
+onMounted(() => {
+  Prism.highlightAll();
+
+  document.querySelectorAll("pre").forEach((pre) => {
+    const button = document.createElement("button");
+    button.textContent = "Copy";
+    button.className = "copy-btn";
+    button.addEventListener("click", async () => {
+      const code = pre.querySelector("code")?.innerText;
+      try {
+        await navigator.clipboard.writeText(code || "");
+        button.textContent = "Copied!";
+        setTimeout(() => (button.textContent = "Copy"), 2000);
+      } catch (err) {
+        console.error("Failed to copy text: ", err);
+      }
+    });
+    pre.style.position = "relative";
+    pre.appendChild(button);
+  });
+});
 
 useSeoMeta({
   title: blog.value?.title,

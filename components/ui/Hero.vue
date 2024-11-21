@@ -4,9 +4,7 @@
   >
     <div class="container mx-auto flex flex-col gap-4 md:flex-row md:items-end">
       <div class="mr-6 flex min-w-[200px] max-w-[40%] flex-col">
-        <h1
-          class="font-dmSerifText mb-4 text-4xl font-semibold md:text-5xl lg:text-6xl"
-        >
+        <h1 class="mb-4 text-4xl font-semibold md:text-5xl lg:text-6xl">
           {{ title }}
         </h1>
       </div>

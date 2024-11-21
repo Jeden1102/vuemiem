@@ -20,10 +20,7 @@
       <p class="md:mb-4">
         {{ useFormattedDate(blog.publishedAt) }}
       </p>
-      <NuxtLink
-        :href="`/blog/${blog.slug}`"
-        class="font-dmSerifText text-xl font-semibold"
-      >
+      <NuxtLink :href="`/blog/${blog.slug}`" class="text-xl font-semibold">
         {{ blog.title }}</NuxtLink
       >
       <p class="font-thin" v-html="blog.lead"></p>
