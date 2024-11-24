@@ -22,8 +22,8 @@
         data-aos="zoom-in"
         :data-aos-delay="idx * 100"
       >
-        <p class="text-lg font-normal">{{ title }}</p>
-        <p class="mt-6 font-extralight">{{ subtitle }}</p>
+        <p class="text-lg font-normal">{{ feature.title }}</p>
+        <p class="mt-6 font-extralight">{{ feature.description }}</p>
       </UiCard>
     </div>
   </div>
