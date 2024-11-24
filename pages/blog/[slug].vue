@@ -50,7 +50,10 @@
           </div>
         </div>
       </div>
-      <div class="blog-page w-full flex-1" v-html="blog.content"></div>
+      <div
+        class="blog-page w-full flex-1 overflow-x-hidden"
+        v-html="blog.content"
+      ></div>
     </div>
     <BlogViewTeaserSimple
       title="Podobne wpisy"

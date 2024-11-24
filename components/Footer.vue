@@ -31,8 +31,8 @@
           <Icon name="mdi:linkedin" size="24" />
         </NuxtLink>
         <div class="flex gap-4 md:order-1">
-          <NuxtLink href="/">Regulamin</NuxtLink>
-          <NuxtLink href="/">Polityka prywatności</NuxtLink>
+          <NuxtLink href="/regulamin">Regulamin</NuxtLink>
+          <NuxtLink href="/polityka-prywatnosci">Polityka prywatności</NuxtLink>
         </div>
         <p class="md:order-3">
           &copy {{ currentYear }} vuemiem. Wszelkie prawa zastrzeżone.

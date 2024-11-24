@@ -64,6 +64,16 @@ export default defineNuxtConfig({
           path: "/kontakt",
           file: "~/pages/contact.vue",
         },
+        {
+          name: "terms",
+          path: "/regulamin",
+          file: "~/pages/terms-and-conditions.vue",
+        },
+        {
+          name: "privacy-policy",
+          path: "/polityka-prywatnosci",
+          file: "~/pages/privacy-policy.vue",
+        },
       );
     },
   },
