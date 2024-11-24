@@ -21,6 +21,9 @@ export type Blog = {
     linkedin: string;
     position: string;
   };
+  image: {
+    url: string;
+  };
 };
 
 export type BlogsResponse = {

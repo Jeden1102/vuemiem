@@ -1,33 +1,17 @@
 <template>
-  <div class="flex flex-col gap-4 py-8 md:flex-row md:gap-8 lg:gap-32">
-    <div class="flex w-52 min-w-52 gap-4" v-if="blog.author">
-      <NuxtLink
-        title="Show my linkedin profile"
-        target="_blank"
-        :href="blog.author.linkedin"
-        class="flex h-12 w-12 min-w-12 items-center justify-center rounded-full bg-zinc-800"
-      >
-        <Icon name="mdi:linkedin" size="24" />
-      </NuxtLink>
-      <div class="flex flex-col gap-2">
-        <p class="font-semibold">
-          {{ blog.author.name }} {{ blog.author.surname }}
-        </p>
-        <div v-html="blog.author.position"></div>
-      </div>
-    </div>
+  <div class="flex flex-col gap-4 rounded-md bg-zinc-800 p-4 md:gap-8">
+    <NuxtImg :src="imgUri" height="200" width="470" class="h-40 object-cover" />
     <div class="flex flex-col gap-4">
-      <p class="md:mb-4">
-        {{ useFormattedDate(blog.publishedAt) }}
+      <p class="text-xl font-semibold">
+        {{ blog.title }}
       </p>
-      <NuxtLink :href="`/blog/${blog.slug}`" class="text-xl font-semibold">
-        {{ blog.title }}</NuxtLink
-      >
-      <p class="font-thin" v-html="blog.lead"></p>
+      <ClientOnly>
+        <p class="font-thin" v-html="blog.lead"></p>
+      </ClientOnly>
     </div>
-    <NuxtLink :href="`/blog/${blog.slug}`" class="md:ml-auto">
-      <UiButton variant="dark" class="mt-6 w-full min-w-52 md:w-fit">
-        Read Blog
+    <NuxtLink :href="`/blog/${blog.slug}`" class="mt-auto">
+      <UiButton variant="dark" class="w-full min-w-52">
+        Sprawdź
         <Icon
           size="24"
           name="material-symbols:arrow-outward"
@@ -41,8 +25,15 @@
 <script setup lang="ts">
 import { defineProps } from "vue";
 import type { Blog } from "./types";
+const config = useRuntimeConfig();
 
 const props = defineProps<{
   blog: Blog;
 }>();
+
+const imgUri = props.blog.image?.url
+  ? config.public.APP_BACKEND_BASE_URI + props.blog.image?.url
+  : config.public.APP_BASE_URI + "/vue-logo.webp";
+
+console.log(props.blog);
 </script>

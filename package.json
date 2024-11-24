@@ -15,14 +15,19 @@
     "@nuxtjs/google-fonts": "^3.2.0",
     "@nuxtjs/tailwindcss": "^6.12.2",
     "@stefanobartoletti/nuxt-social-share": "^1.2.0",
+    "@vee-validate/i18n": "^4.14.7",
+    "@vee-validate/yup": "^4.14.7",
     "aos": "^2.3.4",
     "clsx": "^2.1.1",
     "nuxt": "^3.13.2",
+    "nuxt-mail": "^5.1.1",
     "prismjs": "^1.29.0",
     "tailwind-merge": "^2.5.4",
+    "vee-validate": "^4.14.7",
     "vue": "latest",
     "vue-router": "latest",
-    "vue3-lottie": "^3.3.1"
+    "vue3-lottie": "^3.3.1",
+    "yup-locales": "^1.2.28"
   },
   "devDependencies": {
     "@nuxtjs/apollo": "^5.0.0-alpha.14",

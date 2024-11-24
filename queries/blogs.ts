@@ -32,6 +32,9 @@ export const GET_BLOGS_BY_CATEGORIES = gql`
           name
           linkedin
         }
+        image {
+          url
+        }
       }
     }
   }

@@ -24,7 +24,20 @@ export default defineNuxtConfig({
     "@nuxtjs/apollo",
     "@stefanobartoletti/nuxt-social-share",
     "@nuxt/image",
+    "nuxt-mail",
   ],
+  mail: {
+    message: {
+      to: process.env.MAIL_USER_TO,
+    },
+    smtp: {
+      service: "gmail",
+      auth: {
+        user: process.env.MAIL_USER_FROM,
+        pass: process.env.MAIL_USER_PWD,
+      },
+    },
+  },
   app: {
     head: {
       titleTemplate: "%s | Vuemiem",
