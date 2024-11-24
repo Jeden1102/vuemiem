@@ -53,11 +53,18 @@ export default defineNuxtConfig({
   },
   hooks: {
     "pages:extend"(pages) {
-      pages.push({
-        name: "resources",
-        path: "/zasoby",
-        file: "~/pages/resources/index.vue",
-      });
+      pages.push(
+        {
+          name: "resources",
+          path: "/zasoby",
+          file: "~/pages/resources/index.vue",
+        },
+        {
+          name: "contact",
+          path: "/kontakt",
+          file: "~/pages/contact.vue",
+        },
+      );
     },
   },
 });

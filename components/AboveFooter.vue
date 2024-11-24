@@ -3,34 +3,34 @@
     <div class="container mx-auto">
       <div>
         <UiSectionTitle
-          title="Be Part of the Future Tech Revolution"
-          badge="Learn, Connect, and Innovate"
+          title="Dołącz do społeczności Vue i Nuxt"
+          badge="Ucz się, dziel się wiedzą i rozwijaj"
           icon="carbon:software-resource-cluster"
-          description="Immerse yourself in the world of future technology. Explore our comprehensive resources, connect with fellow tech enthusiasts, and drive innovation in the industry. Join a dynamic community of forward-thinkers."
+          description="Zanurz się w świecie nowoczesnych technologii webowych. Odkrywaj nasze zasoby, współpracuj z innymi entuzjastami technologii i twórz innowacje. Stań się częścią dynamicznej społeczności miłośników frontendu."
         />
       </div>
       <div
         class="grid grid-cols-1 gap-4 rounded-sm bg-zinc-950 p-4 md:grid-cols-2 lg:grid-cols-3"
       >
         <UiFeatureCard
-          title="Resource Access"
-          description="Visitors can access a wide range of resources, including ebooks, whitepapers, reports."
+          title="Zasoby edukacyjne"
+          description="Uzyskaj dostęp do szerokiej gamy materiałów, takich jak ebooki, poradniki czy raporty branżowe."
           iconRight="material-symbols-light:check"
           data-aos="fade-up"
           data-aos-delay="100"
           class="rounded-md border-none bg-zinc-900"
         />
         <UiFeatureCard
-          title="Community Forum"
-          description="Join our active community forum to discuss industry trends, share insights, and collaborate with peers."
+          title="Forum społeczności"
+          description="Dołącz do naszego aktywnego forum, aby dyskutować o trendach w branży, wymieniać się doświadczeniami i współpracować."
           iconRight="material-symbols-light:check"
           data-aos="fade-up"
           data-aos-delay="200"
           class="rounded-md border-none bg-zinc-900"
         />
         <UiFeatureCard
-          title="Tech Events"
-          description="Stay updated on upcoming tech events, webinars, and conferences to enhance your knowledge."
+          title="Wydarzenia technologiczne"
+          description="Bądź na bieżąco z nadchodzącymi wydarzeniami, webinarami i konferencjami, które poszerzą Twoją wiedzę."
           iconRight="material-symbols-light:check"
           data-aos="fade-up"
           data-aos-delay="300"
@@ -40,7 +40,3 @@
     </div>
   </div>
 </template>
-
-<script setup lang="ts"></script>
-
-<style scoped></style>

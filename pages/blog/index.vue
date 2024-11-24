@@ -1,13 +1,9 @@
 <template>
   <div>
     <UiHero
-      title="Unlock the world of knowledge"
-      description="Dive deep into the AI universe with our collection of insightful podcasts. Explore the latest trends, breakthroughs, and discussions on artificial intelligence. Whether you're an enthusiast or a professional, our AI podcasts offer a gateway to knowledge and innovation."
+      title="Zanurz się w świecie frontendu"
+      description="Odkryj nasze artykuły o Vue, Nuxt i technologiach webowych. Poznaj najnowsze trendy, praktyczne poradniki i nowinki ze świata frontend developmentu. Bez względu na Twój poziom zaawansowania, znajdziesz tu inspirację i wiedzę, która przyspieszy Twój rozwój."
     />
     <BlogViewTeaserSimple :perPage="5" :isPaginated="true" :grid="true" />
   </div>
 </template>
-
-<script setup lang="ts"></script>
-
-<style scoped></style>

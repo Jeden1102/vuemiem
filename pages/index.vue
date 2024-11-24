@@ -1,12 +1,15 @@
 <template>
   <div>
     <HomeHero />
-    <UiSectionTitle badge="Unlock the Power of" title="FutureTech Features" />
+    <UiSectionTitle
+      badge="Odkryj możliwości"
+      title="Najlepsze funkcje w Vue i Nuxt"
+    />
     <HomeFeaturesSection />
     <UiSectionTitle
-      badge="A Knowledge Treasure Trove"
-      title="Explore FutureTech's In-Depth Blog Posts"
-      cta-title="View all blogs"
+      badge="Twoja biblioteka wiedzy"
+      title="Zanurz się w artykułach o Vue, Nuxt i web dev"
+      cta-title="Przeglądaj wszystkie artykuły"
       cta-url="/blog"
     />
     <BlogViewTeaserSimple :perPage="3" :isPaginated="false" />
@@ -15,7 +18,8 @@
 
 <script setup lang="ts">
 useSeoMeta({
-  title: "Home",
-  description: "Vue&Nuxt blog",
+  title: "Vue & Nuxt Blog - Poradniki i Nowości",
+  description:
+    "Poznaj najnowsze artykuły o Vue.js, Nuxt, JavaScript i technologiach frontendowych. Poradniki, nowości i praktyczne rozwiązania dla developerów.",
 });
 </script>

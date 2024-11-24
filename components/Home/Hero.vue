@@ -3,39 +3,36 @@
     <div
       class="container mx-auto flex flex-col gap-4 py-4 md:min-h-[60vh] md:flex-row md:py-0 lg:gap-16"
     >
-      <div class="my-auto flex flex-col gap-4 lg:max-w-[720px]">
-        <p class="font-kumbh text-lg" data-aos="fade-up" data-aos-delay="200">
-          Your Journey to Tomorrow Begins Here
-        </p>
+      <div class="my-auto flex flex-col gap-4 pt-8 lg:max-w-[720px]">
         <h1
           class="font-kumbh text-3xl font-normal md:text-5xl lg:text-6xl"
           data-aos="fade-up"
           data-aos-delay="250"
         >
-          Explore the Frontiers of Artificial Intelligence
+          Odkrywaj nowinki z zakresu Vue, Nuxt i technologii frontendowych
         </h1>
         <p class="text-sm md:text-base" data-aos="fade-up" data-aos-delay="300">
-          Welcome to the epicenter of AI innovation. FutureTech AI News is your
-          passport to a world where machines think, learn, and reshape the
-          future.
+          Witamy w centrum wiedzy na temat Vue, Nuxt i frontendowego ekosystemu.
+          Na naszym blogu znajdziesz artykuły, tutoriale i nowinki, które pomogą
+          Ci rozwijać się w świecie nowoczesnego web developmentu.
         </p>
         <div class="grid grid-cols-3 border-t border-slate-800 md:mt-20">
           <Number
-            number="300"
-            description="Resources available"
+            number="50"
+            description="Artykułów w temacie Vue i Nuxt"
             data-aos="fade-up"
             data-aos-delay="300"
           />
           <Number
             class="border-x border-slate-800"
-            number="12k"
-            description="Blogs already posted"
+            number="5k"
+            description="Wizyt miesięcznie"
             data-aos="fade-up"
             data-aos-delay="350"
           />
           <Number
-            number="10k"
-            description="Active users now"
+            number="1k"
+            description="Zadowolonych użytkowników"
             data-aos="fade-up"
             data-aos-delay="400"
           />
@@ -51,44 +48,49 @@
             />
           </div>
         </client-only>
-        <div class="mt-auto" data-aos="fade-up" data-aos-delay="300">
-          <p class="mb-2 text-lg font-normal">Explore Articles</p>
-          <p>Over 1,000 articles on emerging tech trends and breakthroughs.</p>
-          <UiButton variant="dark" class="mt-6 w-full md:w-fit">
-            Explore blogs
-            <Icon
-              size="24"
-              name="material-symbols:arrow-outward"
-              class="text-primary"
-            />
-          </UiButton>
+        <div class="mt-auto pb-20" data-aos="fade-up" data-aos-delay="300">
+          <p class="mb-2 text-lg font-normal">Przeglądaj artykuły</p>
+          <p>
+            Więcej niż 1,000 artykułów na temat Vue, Nuxt i trendów w web
+            developmentzie.
+          </p>
+          <NuxtLink href="/blog">
+            <UiButton variant="dark" class="mt-6 w-full md:w-fit">
+              Przejdź do bloga
+              <Icon
+                size="24"
+                name="material-symbols:arrow-outward"
+                class="text-primary"
+              />
+            </UiButton>
+          </NuxtLink>
         </div>
       </div>
     </div>
     <div class="mt-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
       <UiFeatureCard
-        title="Latest News Updates"
-        subtitle="Stay Current"
-        description="Over 1,000 articles published monthly"
-        iconTop="material-symbols:breaking-news-alt-1"
+        title="Tutoriale o Vue i Nuxt"
+        subtitle="Nauka poprzez praktykę"
+        description="Krok po kroku przewodniki dotyczące Vue, Nuxt i innych technologii frontendowych."
+        iconTop="material-symbols:library-books"
         iconRight="material-symbols-light:check"
         data-aos="fade-up"
         data-aos-delay="300"
       />
       <UiFeatureCard
-        title="Latest News Updates"
-        subtitle="Stay Current"
-        description="Over 1,000 articles published monthly"
-        iconTop="material-symbols:breaking-news-alt-1"
+        title="Aktualności w ekosystemie Vue"
+        subtitle="Bądź na bieżąco"
+        description="Śledź najnowsze aktualizacje i nowości w świecie Vue.js, Nuxt i innych frameworków."
+        iconTop="material-symbols:news"
         iconRight="material-symbols-light:check"
         data-aos="fade-up"
         data-aos-delay="400"
       />
       <UiFeatureCard
-        title="Latest News Updates"
-        subtitle="Stay Current"
-        description="Over 1,000 articles published monthly"
-        iconTop="material-symbols:breaking-news-alt-1"
+        title="Społeczność deweloperów"
+        subtitle="Połącz się z innymi"
+        description="Dołącz do społeczności, dyskutuj, wymieniaj doświadczenia i ucz się razem z innymi."
+        iconTop="material-symbols:groups"
         iconRight="material-symbols-light:check"
         data-aos="fade-up"
         data-aos-delay="500"
@@ -100,5 +102,3 @@
 <script setup lang="ts">
 import { Vue3Lottie } from "vue3-lottie";
 </script>
-
-<style scoped></style>

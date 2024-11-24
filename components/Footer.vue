@@ -3,53 +3,19 @@
     <div class="container mx-auto">
       <div class="grid grid-cols-2 gap-6 sm:grid-cols-3 md:grid-cols-5">
         <div>
-          <p class="mb-4 font-bold">Navigation</p>
+          <p class="mb-4 font-bold">Nawigacja</p>
           <ul class="flex flex-col gap-3 text-zinc-300">
             <li>
-              <NuxtLink href="/">Home</NuxtLink>
+              <NuxtLink href="/">Strona główna</NuxtLink>
             </li>
             <li>
-              <NuxtLink href="/">Blog</NuxtLink>
+              <NuxtLink href="/blog">Blog</NuxtLink>
             </li>
             <li>
-              <NuxtLink href="/">Resources</NuxtLink>
+              <NuxtLink href="/zasoby">Materiały</NuxtLink>
             </li>
             <li>
-              <NuxtLink href="/">Contact</NuxtLink>
-            </li>
-          </ul>
-        </div>
-        <div>
-          <p class="mb-4 font-bold">Blog</p>
-          <ul class="flex flex-col gap-3 text-zinc-300">
-            <li>
-              <NuxtLink href="/">Vue</NuxtLink>
-            </li>
-            <li>
-              <NuxtLink href="/">Nuxt</NuxtLink>
-            </li>
-            <li>
-              <NuxtLink href="/">Tips</NuxtLink>
-            </li>
-            <li>
-              <NuxtLink href="/">Others</NuxtLink>
-            </li>
-          </ul>
-        </div>
-        <div>
-          <p class="mb-4 font-bold">Resources</p>
-          <ul class="flex flex-col gap-3 text-zinc-300">
-            <li>
-              <NuxtLink href="/">Articles</NuxtLink>
-            </li>
-            <li>
-              <NuxtLink href="/">Videos</NuxtLink>
-            </li>
-            <li>
-              <NuxtLink href="/">Files</NuxtLink>
-            </li>
-            <li>
-              <NuxtLink href="/">Others</NuxtLink>
+              <NuxtLink href="/kontakt">Kontakt</NuxtLink>
             </li>
           </ul>
         </div>
@@ -58,18 +24,18 @@
         class="mt-6 flex flex-col items-center justify-between gap-4 border-t border-zinc-800 pt-6 text-zinc-300 md:mt-20 md:flex-row"
       >
         <NuxtLink
-          title="Show my linkedin profile"
+          title="Zobacz mój profil na LinkedIn"
           class="md:order-2"
           href="https://www.linkedin.com/in/dominik-raducki/"
         >
           <Icon name="mdi:linkedin" size="24" />
         </NuxtLink>
         <div class="flex gap-4 md:order-1">
-          <NuxtLink href="/">Terms&Conditions</NuxtLink>
-          <NuxtLink href="/">Privacy Policy</NuxtLink>
+          <NuxtLink href="/">Regulamin</NuxtLink>
+          <NuxtLink href="/">Polityka prywatności</NuxtLink>
         </div>
         <p class="md:order-3">
-          &copy {{ currentYear }} vuemiem. All rights reserved.
+          &copy {{ currentYear }} vuemiem. Wszelkie prawa zastrzeżone.
         </p>
       </div>
     </div>

@@ -12,9 +12,12 @@
         data-aos="fade-up"
         data-aos-delay="100"
       >
-        Get in touch
+        Skontaktuj się ze mną!
       </p>
-      <p data-aos="fade-up" data-aos-delay="150">opis</p>
+      <p data-aos="fade-up" data-aos-delay="150">
+        Masz pytania? Ciekawi Cię jakiś temat? A może chiałbyś współpracować w
+        tworzeniu bloga?
+      </p>
     </div>
     <form @submit="onSubmit" class="flex flex-1 flex-col gap-4">
       <UiInput

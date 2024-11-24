@@ -14,62 +14,60 @@
 <script setup lang="ts">
 const features = [
   {
-    icon: "streamline:ai-technology-spark",
-    title: "Future Technology Blog",
+    icon: "mdi:vuejs",
+    title: "Blog o Vue, Nuxt i frontendzie",
     subtitle:
-      "Stay informed with our blog section dedicated to future technology.",
+      "Poznaj najnowsze artykuły o Vue, Nuxt i technologiach frontendowych. Od praktycznych tutoriali po najświeższe aktualności.",
     features: [
       {
-        title: "Future Technology Blog",
+        title: "Porady i tutoriale",
         description:
-          "Stay informed with our blog section dedicated to future technology.",
+          "Dowiedz się, jak efektywnie korzystać z Vue i Nuxt w codziennej pracy dzięki praktycznym wskazówkom.",
       },
       {
-        title: "Future Technology Blog",
+        title: "Nowości w ekosystemie",
         description:
-          "Stay informed with our blog section dedicated to future technology.",
+          "Bądź na bieżąco z aktualizacjami, nowymi wersjami frameworków i trendami w frontendzie.",
       },
       {
-        title: "Future Technology Blog",
+        title: "Przykłady użycia",
         description:
-          "Stay informed with our blog section dedicated to future technology.",
+          "Zobacz, jak rozwiązywać rzeczywiste problemy dzięki przykładom kodu i gotowym rozwiązaniom.",
       },
       {
-        title: "Future Technology Blog",
+        title: "Przemyślenia eksperta",
         description:
-          "Stay informed with our blog section dedicated to future technology.",
+          "Poznaj moje doświadczenia, refleksje i najlepsze praktyki w pracy z technologiami webowymi.",
       },
     ],
   },
   {
-    icon: "hugeicons:resources-add",
-    title: "Research insights resources",
+    icon: "heroicons-solid:document-text",
+    title: "Materiały i zasoby",
     subtitle:
-      "Stay informed with our blog section dedicated to future technology.",
+      "Zasoby do nauki, w tym tutoriale, cheetsheety i inne pliki wspierające Twoją naukę Vue i Nuxt.",
     features: [
       {
-        title: "Future Technology Blog",
+        title: "Szczegółowe tutoriale",
         description:
-          "Stay informed with our blog section dedicated to future technology.",
+          "Krok po kroku przeprowadź swoje projekty dzięki naszym dokładnym instrukcjom.",
       },
       {
-        title: "Future Technology Blog",
+        title: "Cheatsheety",
         description:
-          "Stay informed with our blog section dedicated to future technology.",
+          "Pobierz użyteczne ściągi dla Vue, Nuxt i innych narzędzi frontendowych, które usprawnią Twoją pracę.",
       },
       {
-        title: "Future Technology Blog",
+        title: "Darmowe pliki",
         description:
-          "Stay informed with our blog section dedicated to future technology.",
+          "Skorzystaj z gotowych komponentów, szablonów i zasobów, które możesz użyć w swoich projektach.",
       },
       {
-        title: "Future Technology Blog",
+        title: "Materiały do pobrania",
         description:
-          "Stay informed with our blog section dedicated to future technology.",
+          "Raporty, e-booki i inne wartościowe pliki, które wzbogacą Twoją wiedzę.",
       },
     ],
   },
 ];
 </script>
-
-<style scoped></style>

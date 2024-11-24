@@ -10,26 +10,26 @@
         >
           <div class="grid grid-cols-2 gap-4">
             <div class="flex flex-col gap-2">
-              <p class="font-thin">Publication Date</p>
+              <p class="font-thin">Data publikacji</p>
               <p>{{ useFormattedDate(blog.publishedAt) }}</p>
             </div>
             <div class="flex flex-col gap-2">
-              <p class="font-thin">Category</p>
+              <p class="font-thin">Kategoria</p>
               <p v-for="blogCategory in blog.blog_categories">
                 {{ blogCategory.name }}
               </p>
             </div>
             <div class="flex flex-col gap-2">
-              <p class="font-thin">Reading time</p>
+              <p class="font-thin">Czas czytania</p>
               <p>{{ blog.reading_time }} min.</p>
             </div>
             <div class="flex flex-col gap-2">
-              <p class="font-thin">Author</p>
+              <p class="font-thin">Autor</p>
               <p>{{ blog.author.name }} {{ blog.author.surname }}</p>
             </div>
           </div>
           <div class="flex flex-wrap gap-x-4 gap-y-2">
-            <p class="mb-2 w-full">Share this blog!</p>
+            <p class="mb-2 w-full">Udostępnij ten wpis!</p>
             <ClientOnly>
               <UiButton size="small" v-for="network in networks">
                 <SocialShare :network="network" :url="currentURI">
@@ -39,7 +39,7 @@
             </ClientOnly>
           </div>
           <div class="flex flex-col gap-4">
-            <p>Table of Contents</p>
+            <p>Spis treści</p>
             <ul
               class="flex list-disc flex-col gap-4 rounded-md bg-zinc-900 p-6 pl-8"
             >
@@ -53,7 +53,7 @@
       <div class="blog-page w-full flex-1" v-html="blog.content"></div>
     </div>
     <BlogViewTeaserSimple
-      title="Similiar news"
+      title="Podobne wpisy"
       :perPage="3"
       :isPaginated="false"
       :baseCategory="blog.blog_categories[0].slug"
@@ -92,7 +92,7 @@ if (data.value?.blogs[0]) {
 } else {
   showError({
     statusCode: 404,
-    statusMessage: "Blog post not found",
+    statusMessage: "Wpis na blogu nie został znaleziony",
   });
 }
 
@@ -127,10 +127,14 @@ function generateTableOfContents() {
 }
 
 useSeoMeta({
-  title: blog.value?.title,
+  title: blog.value?.title || "Wpis na blogu - Vue i Nuxt",
   ogTitle: blog.value?.title,
-  description: blog.value?.lead,
-  ogDescription: blog.value?.lead,
+  description:
+    blog.value?.lead ||
+    "Poznaj szczegóły w najnowszym wpisie na blogu o Vue, Nuxt i frontendzie.",
+  ogDescription:
+    blog.value?.lead ||
+    "Poznaj szczegóły w najnowszym wpisie na blogu o Vue, Nuxt i frontendzie.",
   ogImage: config.public.APP_BASE_URI + "/vue-logo.webp",
 });
 </script>

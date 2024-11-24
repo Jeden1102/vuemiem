@@ -1,8 +1,8 @@
 <template>
   <div>
     <UiHero
-      title="Unlock the world of knowledge"
-      description="Dive deep into the AI universe with our collection of insightful podcasts. Explore the latest trends, breakthroughs, and discussions on artificial intelligence. Whether you're an enthusiast or a professional, our AI podcasts offer a gateway to knowledge and innovation."
+      title="Odkryj świat wiedzy o Vue i Nuxt"
+      description="Zanurz się w świecie technologii frontendowych dzięki naszej kolekcji zasobów. Poznaj najnowsze trendy, rozwiązania i poradniki związane z Vue.js, Nuxt i web developmentem. Niezależnie od tego, czy jesteś początkującym, czy doświadczonym developerem, nasze zasoby są kluczem do Twojego rozwoju."
     />
     <ResourcesViewTeaserSimple :perPage="10" :isPaginated="true" />
   </div>
