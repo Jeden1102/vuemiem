@@ -12,7 +12,7 @@
         {{ blog.title }}
       </p>
       <ClientOnly>
-        <p class="font-thin" v-html="blog.lead"></p>
+        <p class="line-clamp-3 font-thin" v-html="blog.lead"></p>
       </ClientOnly>
     </div>
     <NuxtLink :href="`/blog/${blog.slug}`" class="mt-auto">

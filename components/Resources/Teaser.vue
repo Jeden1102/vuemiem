@@ -12,7 +12,7 @@
         {{ resource.title }}
       </p>
       <ClientOnly>
-        <p class="font-thin" v-html="resource.lead"></p>
+        <p class="line-clamp-3 font-thin" v-html="resource.lead"></p>
       </ClientOnly>
     </div>
     <div>
