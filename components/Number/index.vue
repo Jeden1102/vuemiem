@@ -12,7 +12,7 @@ import { defineProps, useAttrs } from "vue";
 
 const attrs = useAttrs();
 
-const props = defineProps<{
+defineProps<{
   number: string;
   description: string;
 }>();

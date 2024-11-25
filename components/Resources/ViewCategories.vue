@@ -17,7 +17,7 @@ import type { ResourceCategory } from "./types";
 
 const activeCategory = defineModel();
 
-const props = defineProps<{
+defineProps<{
   categories: ResourceCategory[];
 }>();
 

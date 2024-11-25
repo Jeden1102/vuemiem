@@ -17,7 +17,7 @@ import type { BlogCategory } from "./types";
 
 const activeCategory = defineModel();
 
-const props = defineProps<{
+defineProps<{
   categories: BlogCategory[];
 }>();
 

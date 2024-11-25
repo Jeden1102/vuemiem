@@ -51,3 +51,9 @@
     </p>
   </div>
 </template>
+
+<script setup lang="ts">
+useSeoMeta({
+  title: "Polityka prywatności",
+});
+</script>

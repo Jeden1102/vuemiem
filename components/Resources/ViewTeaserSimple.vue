@@ -63,7 +63,7 @@ const allBlogCategories = computed(() => {
   }
   return [
     {
-      name: "All",
+      name: "Wszystkie",
       slug: "all",
     },
     ...categories.value?.resourceCategories,

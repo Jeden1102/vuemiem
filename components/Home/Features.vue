@@ -39,7 +39,7 @@ type Feature = {
   description: string;
 };
 
-const props = defineProps<{
+defineProps<{
   title: string;
   subtitle: string;
   icon: string;

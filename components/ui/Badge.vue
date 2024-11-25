@@ -20,7 +20,7 @@ enum Variants {
   dark = "dark",
 }
 
-const props = withDefaults(
+withDefaults(
   defineProps<{
     variant?: keyof typeof Variants;
   }>(),

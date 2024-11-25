@@ -7,3 +7,11 @@
     <ResourcesViewTeaserSimple :perPage="10" :isPaginated="true" />
   </div>
 </template>
+
+<script setup lang="ts">
+useSeoMeta({
+  title: "Zasoby",
+  description:
+    "Poznaj najnowsze artykuły o Vue.js, Nuxt, JavaScript i technologiach frontendowych. Poradniki, nowości i praktyczne rozwiązania dla developerów.",
+});
+</script>

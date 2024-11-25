@@ -7,3 +7,11 @@
     <BlogViewTeaserSimple :perPage="5" :isPaginated="true" :grid="true" />
   </div>
 </template>
+
+<script setup lang="ts">
+useSeoMeta({
+  title: "Blog",
+  description:
+    "Poznaj najnowsze artykuły o Vue.js, Nuxt, JavaScript i technologiach frontendowych. Poradniki, nowości i praktyczne rozwiązania dla developerów.",
+});
+</script>

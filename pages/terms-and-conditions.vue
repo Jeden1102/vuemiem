@@ -37,3 +37,8 @@
     </div>
   </template>
   
+<script setup lang="ts">
+useSeoMeta({
+  title: "Regulamin",
+});
+</script>

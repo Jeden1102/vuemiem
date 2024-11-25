@@ -40,6 +40,4 @@ const props = defineProps<{
 const imgUri = props.blog.image?.url
   ? config.public.APP_BACKEND_BASE_URI + props.blog.image?.url
   : config.public.APP_BASE_URI + "/vue-logo.webp";
-
-console.log(props.blog);
 </script>

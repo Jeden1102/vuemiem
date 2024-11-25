@@ -33,7 +33,7 @@ enum Size {
   small = "small",
 }
 
-const props = withDefaults(
+withDefaults(
   defineProps<{
     variant?: keyof typeof Variants;
     size?: keyof typeof Size;
