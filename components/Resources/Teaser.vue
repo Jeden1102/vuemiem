@@ -1,6 +1,12 @@
 <template>
   <div class="flex flex-col gap-4 rounded-md bg-zinc-800 p-4 md:gap-8">
-    <NuxtImg :src="imgUri" height="200" width="470" class="h-40 object-cover" />
+    <NuxtImg
+      :src="imgUri"
+      height="200"
+      width="470"
+      class="h-40 object-cover"
+      alt="Zdjęcie materiału"
+    />
     <div class="flex flex-col gap-4">
       <p class="text-xl font-semibold">
         {{ resource.title }}

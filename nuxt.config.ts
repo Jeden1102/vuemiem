@@ -8,6 +8,15 @@ export default defineNuxtConfig({
       APP_BACKEND_BASE_URI: process.env.NUXT_PUBLIC_BACKEND_BASE_URI,
     },
   },
+  build: {
+    terser: {
+      terserOptions: {
+        compress: {
+          drop_console: true,
+        },
+      },
+    },
+  },
   modules: [
     [
       "@nuxtjs/google-fonts",

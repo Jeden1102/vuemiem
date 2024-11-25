@@ -42,14 +42,14 @@
           class="text-2xl md:text-base md:font-light"
           >Materiały</NuxtLink
         >
-        <UiButton class="mt-2 md:ml-20 md:mt-0">
-          <NuxtLink
-            @click="toggleMenu"
-            href="kontakt"
-            class="text-2xl md:text-base md:font-light"
-            >Kontakt</NuxtLink
-          >
-        </UiButton>
+
+        <NuxtLink
+          @click="toggleMenu"
+          href="kontakt"
+          class="text-2xl md:text-base md:font-light"
+        >
+          <UiButton class="mt-2 md:ml-20 md:mt-0">Kontakt</UiButton>
+        </NuxtLink>
       </nav>
     </div>
   </header>
